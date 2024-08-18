@@ -1,24 +1,23 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import MovieList from "./MovieList";
-import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
-import usePopularMovies from "../hooks/usePopularMovies";
-import useTopRatedMovies from "../hooks/useTopRatedMovies";
-import useUpcomingMovies from "../hooks/useUpcomingMovies";
+import FilterMovies from "./FilterMovies";
 
 const HomeMovieContainer = () => {
   const movies = useSelector((store) => store.movies);
 
-  useNowPlayingMovies();
-  usePopularMovies();
-  useTopRatedMovies();      
-  useUpcomingMovies();
+  
   return (
-    <div>
+    <div className="flex m-8">
+      <div className="w-3/12">
+      <FilterMovies/>
+      </div>
+      <div className="w-9/12">
       <MovieList title={"Now playing"} movies={movies.nowPlayingMovies} />
-      <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
+      {/* <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
       <MovieList title={"Popular"} movies={movies.popularMovies} />
-      <MovieList title={"Up Coming"} movies={movies.upcomingMovies} />
+      <MovieList title={"Up Coming"} movies={movies.upcomingMovies} /> */}
+    </div>
     </div>
   );
 };

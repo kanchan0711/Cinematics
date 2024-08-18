@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import moviesReducer from "./moviesSlice"
-// import gptReducer from "./gptSlice"
-// import langReducer from "./configSlice";
+import filterReducer from "./filterSlice"
+
 
 const appStore = configureStore({
     reducer:{
-        movies : moviesReducer,
-        // gpt: gptReducer,
-        // language: langReducer,
+        movies : moviesReducer, 
+        filter: filterReducer
+       
     }
 })
 
