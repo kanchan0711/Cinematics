@@ -14,7 +14,7 @@ const dispatch = useDispatch();
     }
     useEffect(() =>{
         getTopRatedMovies();
-    })
+    },)
 }
 
 export default useTopRatedMovies;

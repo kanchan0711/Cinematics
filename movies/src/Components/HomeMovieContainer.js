@@ -3,9 +3,14 @@ import { useSelector } from "react-redux";
 import MovieList from "./MovieList";
 import FilterMovies from "./FilterMovies";
 
-const HomeMovieContainer = () => {
-  const movies = useSelector((store) => store.movies);
 
+const HomeMovieContainer = () => {
+
+  
+  
+const movies = useSelector((store) => store.movies);
+const filter = useSelector((store) => store.filter);
+ 
   
   return (
     <div className="flex m-8">
@@ -13,10 +18,15 @@ const HomeMovieContainer = () => {
       <FilterMovies/>
       </div>
       <div className="w-9/12">
-      <MovieList title={"Now playing"} movies={movies.nowPlayingMovies} />
-      {/* <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
-      <MovieList title={"Popular"} movies={movies.popularMovies} />
-      <MovieList title={"Up Coming"} movies={movies.upcomingMovies} /> */}
+      {filter.filterMovies === "nowPlaying" && <MovieList title={"Now playing"} movies={movies.nowPlayingMovies} />}
+      {filter.filterMovies === "topRated" && <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />}
+      {filter.filterMovies === "popular" && <MovieList title={"Popular"} movies={movies.popularMovies} />}
+      {filter.filterMovies === "upComing" && <MovieList title={"Up Coming"} movies={movies.upcomingMovies} />} 
+
+      {/* <MovieList title={"Now playing"} movies={movies.nowPlayingMovies} />
+<MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
+<MovieList title={"Popular"} movies={movies.popularMovies} />
+<MovieList title={"Up Coming"} movies={movies.upcomingMovies} /> */}
     </div>
     </div>
   );

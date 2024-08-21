@@ -15,9 +15,9 @@ export const API_OPTIONS = {
   export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 
   export const SUPPORTED_CATAGORIES = [
-    { identifier: "nowPlaying", name: "Movies" },
+    // { identifier: "now", name: "Movies" },
     { identifier: "nowPlaying", name: "Now Playing" },
-    { identifier: "upcoming", name: "Up Coming" },
-    { identifier: "Popular", name: "Popular" },
-    { identifier: "Tranding", name: "Tranding" },
+    { identifier: "upComing", name: "Up Coming" },
+    { identifier: "popular", name: "Popular" },
+    { identifier: "topRated", name: "Top Rated" },
   ];

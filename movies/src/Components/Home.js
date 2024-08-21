@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchBar from './SearchBar'
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
+import HomeMovieContainer from './HomeMovieContainer'
 
 const Home = () => {
     useNowPlayingMovies()
@@ -8,6 +9,7 @@ const Home = () => {
     
     <div>
       <SearchBar/>
+      <HomeMovieContainer/>
     </div>
   )
 }
