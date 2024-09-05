@@ -1,6 +1,8 @@
+export const API_key = "38913ed3b726655f529384dbaf20542b"
 
-export const BG_IMG = "https://png.pngtree.com/thumb_back/fh260/background/20191113/pngtree-blue-movie-film-texture-background-image_321897.jpg"
+// export const BG_IMG = "https://png.pngtree.com/thumb_back/fh260/background/20191113/pngtree-blue-movie-film-texture-background-image_321897.jpg"
 
+export const BG_IMG = "https://t4.ftcdn.net/jpg/02/71/50/69/360_F_271506927_WWFfd92jDIIDx6DgMflakU14o5jRPgBm.jpg"
 export const API_OPTIONS = {
     method: "GET",
     headers: {
@@ -14,10 +16,18 @@ export const API_OPTIONS = {
 
   export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 
-  export const SUPPORTED_CATAGORIES = [
-    // { identifier: "now", name: "Movies" },
+  export const SUPPORTED_CATEGORIES = [
     { identifier: "nowPlaying", name: "Now Playing" },
     { identifier: "upComing", name: "Up Coming" },
     { identifier: "popular", name: "Popular" },
     { identifier: "topRated", name: "Top Rated" },
   ];
+
+  export const SUPPORTED_LANGUAGES = [
+    {identifier: "hi", name: "Hindi"},
+    {identifier: "en", name: "English"},
+    {identifier: "ko", name: "Korian"},
+    {identifier: "tr", name: "Türkçe"},
+    {identifier: "ru", name: "Russian"},
+  ]
+

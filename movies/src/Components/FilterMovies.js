@@ -1,39 +1,33 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { SUPPORTED_CATAGORIES } from '../utils/Constant';
-import { changeFilter } from '../utils/filterSlice';
+import React from "react";
+import MovieCart from "./MovieCart";
 
-const FilterMovies = () => {
-  const dispatch = useDispatch();
+const FilterMovies = ({title, filterMovies}) => {
 
-  const handleFilterClick=(filterIdentifier) => {
-    // dispatch(changeFilter(e.target.name
-    // ));
-    // console.log(e.target.name)
-    dispatch(changeFilter(filterIdentifier))
-    console.log(filterIdentifier)
-  }
- 
+  if (!filterMovies || filterMovies.length === 0) {
+    return null}
+  // const filterMovies = useSelector((store) => store.filterGenres.getGenreMovieList);
+  // console.log(filterMovies)
+  
   
 
+
   return (
-    <div className='mt-20 items-center border border-[#0075f2] rounded-md'>
-      <p className='text-center font-bold m-4 text-lg'>Filters</p>
-      <div className='flex flex-wrap gap-2 m-5'>
-        {SUPPORTED_CATAGORIES.map((filter) => (
-          <div key={filter.identifier}>
-            <button
-              className='border text-sm border-[#0075f2] text-[#0075f2] px-4 py-1 rounded-full font-bold hover:bg-[#0075f2] hover:text-white'
-              onClick={() => handleFilterClick(filter.identifier)}
-            >
-              {filter.name}
-            </button>
-          </div>
-        ))}
-      </div>
-    </div>
+    <div className=" bg-white rounded-2xl h-[138.7vh] overflow-y-scroll">
+    <div>
+    <div className="flex justify-center"> 
+        {/* <h2 className="text-[#032541] font-bold text-3xl mt-5 ">{title}</h2> */}
+        </div>
+            <div className='flex flex-wrap justify-center'>
+            {/* <Slider {...settings}> */}
+              { (filterMovies.length === 0)? null:  ( filterMovies?.map((movie) => (
+                    <MovieCart key={movie.id} movie={movie}  />
+                )))}
+                {/* </Slider> */}
+            </div>
+            </div>
+            </div>
+   
   );
 };
 
 export default FilterMovies;
-

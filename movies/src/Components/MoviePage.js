@@ -1,11 +1,9 @@
 import React from 'react';
 import MovieDetails from './MovieDetails';
 import useMovieDetails from '../hooks/useMovieDetails';
-import { useSelector } from 'react-redux';
 
 const MoviePage = () => {
     useMovieDetails()
-    const Details = useSelector((store)=> store.MovieDetails)  
    
 
   return (

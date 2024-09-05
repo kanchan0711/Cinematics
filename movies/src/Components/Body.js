@@ -1,38 +1,33 @@
-import React from 'react'
-import Header from './Header'
-import Home from './Home'
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './Home';
 import MoviePage from './MoviePage';
-import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
-import usePopularMovies from "../hooks/usePopularMovies";
-import useTopRatedMovies from "../hooks/useTopRatedMovies";
-import useUpcomingMovies from "../hooks/useUpcomingMovies";
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
-const Body = () => {
-  useNowPlayingMovies();
-  usePopularMovies();
-  useTopRatedMovies();      
-  useUpcomingMovies();
-
+import MovieCategory from './MovieCategory';
+import Layout from './Layout'; // Import the Layout component
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element:<Home/>
+    element: <Layout />, // Wrap routes with the Layout
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "movies/:id",
+        element: <MoviePage />,
+      },
+      {
+        path: "category",
+        element: <MovieCategory />,
+      },
+    ],
   },
-  {
-    path: "/movies/:id",
-    element:<MoviePage/>
-  }
-])
+]);
 
-  return (
-    <div className='bg-[#f5f5f5]'>
-      {/* <MoviePage/> */}
-      <Header />
-      <RouterProvider router={appRouter}/>
-    </div>
-  )
-}
+const Body = () => {
+  return <RouterProvider router={appRouter} />;
+};
 
 export default Body;

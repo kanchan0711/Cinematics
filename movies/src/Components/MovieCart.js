@@ -4,15 +4,17 @@ import { Link } from "react-router-dom";
 
 const MovieCart = ({ movie }) => {
 
+
   const { poster_path, original_title, vote_average, id } = movie;
 
   const handleDetailsClick = () => {
+    
   };
 
   return (
-    <div className="m-4 w-[200px]">
+    <div className="m-4 w-[200px] h-[390px]">
       <img
-        className="w-[200px] h-[275px] object-cover flex-shrink-0 rounded-t-md"
+        className="w-[200px] h-[255px] object-cover flex-shrink-0 rounded-t-md"
         src={IMG_CDN_URL + poster_path}
         alt="Movie"
       />
