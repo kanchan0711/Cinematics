@@ -10,12 +10,13 @@ const SearchBar = () => {
  
   const handleSearch = () => {
     dispatch(addsearchMovieName(searchMovieRef.current.value)); 
+    console.log(searchMovieRef.current.value)
     dispatch(showSearchMovies(true)) // Update the `query` state with the input value
   };
 
   return (
     <>
-    <div className="h-full min-w-screen px-10 pb-8 pt-12 text-white  bg-no-repeat "
+    <div className="h-full min-w-screen px-10 pb-8 pt-12 text-white  bg-no-repeat  "
       style={{ backgroundImage: `url(${BG_IMG})`, backgroundSize: 'cover' }}>
       <div >
         <h1 className="text-[2.4rem] font-bold">Want to book movie ticket?</h1>
@@ -29,7 +30,7 @@ const SearchBar = () => {
         >
           <input
             ref={searchMovieRef}
-            className="relative bg-white col-span-10 w-full p-3 rounded-l-full hover:border-none"
+            className="relative p-2 bg-white text-black col-span-10 w-full rounded-l-full focus:outline-none focus:border-none border-none"
             type="text"
             placeholder="What would you like to watch today"
 

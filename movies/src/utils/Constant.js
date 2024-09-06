@@ -17,10 +17,10 @@ export const API_OPTIONS = {
   export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
 
   export const SUPPORTED_CATEGORIES = [
-    { identifier: "nowPlaying", name: "Now Playing" },
-    { identifier: "upComing", name: "Up Coming" },
-    { identifier: "popular", name: "Popular" },
-    { identifier: "topRated", name: "Top Rated" },
+    { identifier: "nowPlayingMovies", name: "Now Playing" },
+    { identifier: "upComingMovies", name: "Up Coming" },
+    { identifier: "popularMovies", name: "Popular" },
+    { identifier: "topRatedMovies", name: "Top Rated" },
   ];
 
   export const SUPPORTED_LANGUAGES = [

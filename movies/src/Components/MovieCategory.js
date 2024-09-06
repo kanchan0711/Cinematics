@@ -2,7 +2,6 @@ import React from 'react'
 import Filter from './Filter'
 import { useSelector } from 'react-redux'
 import useFilter from '../hooks/useFilter'
-import MovieList from './MovieList'
 import FilterMovies from './FilterMovies'
 import useFilterMovies from '../hooks/useFilterMovies'
 
@@ -22,7 +21,7 @@ const MovieCategory = () => {
     const generMovies = filterGenres.getGenreMovieList
     const lang = filterGenres.getMoviesLang
     
-    console.log(genreId, lang)
+    // console.log(genreId, lang)
     useFilterMovies(genreId, lang)
    
    

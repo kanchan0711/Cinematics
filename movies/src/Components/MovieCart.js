@@ -12,7 +12,7 @@ const MovieCart = ({ movie }) => {
   };
 
   return (
-    <div className="m-4 w-[200px] h-[390px]">
+    <div className=" w-[200px] h-[390px]">
       <img
         className="w-[200px] h-[255px] object-cover flex-shrink-0 rounded-t-md"
         src={IMG_CDN_URL + poster_path}

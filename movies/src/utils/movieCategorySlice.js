@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const movieCategory = createSlice({
     name: "category",
     initialState:{
-        category: "nowPlaying"
+        category: "nowPlayingMovies"
 
     },
     reducers:{

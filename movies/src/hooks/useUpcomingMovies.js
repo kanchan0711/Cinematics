@@ -12,7 +12,7 @@ const useUpcomingMovies = () => {
 
         // fetch('https://api.themoviedb.org/3/search/keyword?query=%22horror%22&page=1', API_OPTIONS)
         const json = await data.json();
-        // console.log(json)
+        console.log("upcoming")
         dispatch(addUpcomingMovies(json.results))
 
     }
