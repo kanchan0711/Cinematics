@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { SUPPORTED_CATEGORIES } from "../utils/Constant";
 import UpComingMovies from "./UpComingMovies";
+import MovieCart from "./MovieCart";
 
 const HomeMovieContainer = () => {
   const movies = useSelector((store) => store.movies); // Fetch all movies
@@ -21,15 +22,7 @@ console.log(movies.nowPlayingMovies)
 
   return (
     <>
-      {searchMovie.showSearchMovies ? ( null
-        // If search is active, show search results
-        // <MovieList title={"Your Movies"} movies={searchMovie.searchMovies} />
-      ) : (
-        // Otherwise, show movies based on selected category
-        
-        <UpComingMovies title={"UpComing Movies"} movies={movies.upComingMovies} />
-      )}
-      {/* <MovieList e={"nowPlaying"} movies={movies.nowPlayingMovies}/> */}
+    <UpComingMovies/>
     </>
   );
 };

@@ -59,9 +59,10 @@ const Header = () => {
     {SUPPORTED_CATEGORIES.map((Category) => (
             <Link to={"movies/nowPlaying"}><p key={Category.identifier} value={Category.identifier} className='py-2 hover:text-[#01b4e4] cursor-pointer ' onClick={() => handleCategoryClick(Category.identifier, Category.name)}>
               {Category.name}
-              </p></Link>
+              </p>
+              </Link>
           ))}
-          
+         
     </div>
     </>
   )

@@ -1,14 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { IMG_CDN_URL } from "../utils/Constant";
+import { Link } from "react-router-dom";
 // import FontAwesomeIcon from 
 // import ImageColorBg from "./ImageColorBg";
 
 const MovieDetails = ({ title }) => {
   const details = useSelector((store) => store.movieDetails);
-  console.log(details);
-  const movieDetails = details[0];
-  if (!details || details.length === 0) return;
+  
+  const movieDetails = details.movieDetails;
+  console.log(movieDetails);
+  if (!movieDetails || movieDetails.length === 0) return;
   const {
     origin_country,
     original_language,
@@ -18,8 +20,10 @@ const MovieDetails = ({ title }) => {
     vote_average,
     genres,
     release_date,
-    spoken_languages
-  } = movieDetails;
+    spoken_languages,
+    id
+  } = movieDetails
+  ;
   console.log(
     origin_country,
     original_language,
@@ -29,7 +33,8 @@ const MovieDetails = ({ title }) => {
     vote_average,
     genres,
     release_date,
-    spoken_languages
+    spoken_languages,
+    id
   );
 
   const img_ur = IMG_CDN_URL + poster_path
@@ -48,8 +53,8 @@ const MovieDetails = ({ title }) => {
           <p className="text-white my-4">{overview}</p>
           <div  className="flex gap-3">
           {genres.map((genre) => (
-            <div className=" flex text-lg text-[#8af2df] ">
-            <span key={genre.id}>  {genre.name}. </span>
+            <div key={genre.id} className=" flex text-lg text-[#8af2df] ">
+            <span >  {genre.name}. </span>
         
             </div>
             
@@ -61,8 +66,9 @@ const MovieDetails = ({ title }) => {
             <p key={lang.name}>Available Languages - {lang.english_name} </p>
           ))}
           <p className="text-[#f9d36e] my-4">Rating - {vote_average}</p>
-          
+          <Link to={"/movie/trailer/" +id}>
           <button className="bg-[#0fb6de] px-12 py-3 rounded-md text-white font-bold my-2  ">Play Now</button>
+          </Link>
           {/* <FontAwesomeIcon icon="fa-regular fa-circle-play" /> */}
           </div>
         

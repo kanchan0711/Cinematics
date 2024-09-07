@@ -22,7 +22,7 @@ const MovieCategory = () => {
     const lang = filterGenres.getMoviesLang
     
     // console.log(genreId, lang)
-    useFilterMovies(genreId, lang)
+  useFilterMovies(genreId, lang)
    
    
 

@@ -2,10 +2,10 @@ import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Home';
 import MoviePage from './MoviePage';
-import Layout from './Layout'; // Import the Layout component
-import FilterMovies from './FilterMovies';
+import Layout from './Layout'; 
 import MovieCategory from './MovieCategory';
 import MoviesList from './MoviesList';
+import MovieTrailer from './MovieTrailer';
 
 const appRouter = createBrowserRouter([
   {
@@ -28,6 +28,10 @@ const appRouter = createBrowserRouter([
       {
         path:"movies/nowPlaying",
         element: <MoviesList/>
+      },
+      {
+        path: "/movie/trailer/:id",
+        element:<MovieTrailer/>
       }
     ],
   },

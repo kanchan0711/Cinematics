@@ -1,19 +1,35 @@
 import React from 'react';
 import MovieDetails from './MovieDetails';
 import useMovieDetails from '../hooks/useMovieDetails';
+import useMovieTrailer from '../hooks/useMovieTrailer';
+import MovieCast from './MovieCast';
+import useMovieCast from '../hooks/useMovieCast';
+import { useParams } from 'react-router-dom';
 
 const MoviePage = () => {
-    useMovieDetails()
-   
+  const { id } = useParams();
+
+ 
+
+  // Fetch movie details, cast, and trailer using the id
+  useMovieDetails(id);
+  useMovieCast(id);
+  useMovieTrailer(id);
+   // Return early if the id is not available
+  if (!id) {
+    return <div>Movie not found. Please check the URL and try again.</div>;
+  }
 
   return (
     <div>
       <MovieDetails />
+      <MovieCast />
     </div>
   );
 };
 
 export default MoviePage;
+
 
 
 
