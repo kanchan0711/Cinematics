@@ -19,8 +19,8 @@ const SearchBar = () => {
     <div className="h-full min-w-screen px-10 pb-8 pt-12 text-white  bg-no-repeat  "
       style={{ backgroundImage: `url(${BG_IMG})`, backgroundSize: 'cover' }}>
       <div >
-        <h1 className="text-[2.4rem] font-bold">Want to book movie ticket?</h1>
-        <p className="text-gray-300 text-2xl">Book Your Ticket now...</p>
+        <h1 className="text-[2.4rem] font-bold">Want do you want to watch today?</h1>
+        <p className="text-gray-300 text-2xl">Search here...</p>
       </div>
 
       <div className="flex ">

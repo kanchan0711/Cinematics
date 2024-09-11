@@ -4,7 +4,7 @@ const searchSlice = createSlice({
     name: "searchData",
     initialState:{
         searchMovieName: null,
-        searchMovies: [],
+        searchMovies: null,
         showSearchMovies: false,
     },
     reducers:{
