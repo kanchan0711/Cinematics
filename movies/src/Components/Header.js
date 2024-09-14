@@ -44,9 +44,9 @@ const Header = () => {
             Search
         </button>
         </Link>
-        {/* <button className='border border-[#0075f2] text-[#0075f2] px-5 py-2 rounded-full font-bold hover:bg-[#0075f2] hover:text-white'>
-            login
-        </button> */}
+        <button className='border border-[#0075f2] text-[#0075f2] px-5 py-2 rounded-full font-bold hover:bg-[#0075f2] hover:text-white'>
+            Dark
+        </button>
        </div>
       </div>
     </div>

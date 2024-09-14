@@ -1,0 +1,15 @@
+.cart {
+    position: relative;
+}
+
+.cart::after {
+    content: " "; /* Ensures the pseudo-element is rendered */
+    position: absolute;
+    width: calc(100% + 6px); /* Increase width to create the border effect */
+    height: calc(100% + 6px); /* Increase height to create the border effect */
+    left: -3px; /* Shift it by half the padding to center it */
+    top: -3px; /* Shift it by half the padding to center it */
+    z-index: -1; /* Behind the cart content */
+    border-radius: 8px; /* Match the cart's border radius */
+    background: conic-gradient(from 0deg, red, blue, green, yellow); /* Gradient border */
+}

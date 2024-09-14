@@ -4,6 +4,7 @@ import categoryRducer from "./movieCategorySlice"
 import movieDetalsReducer from "./movieDetailsSlice"
 import filterReducer from "./filterSlice"
 import searchReducer from "./searchSlice"
+import theameReducer from "./theameSlice"
 // import filterSlice from "./filterSlice";
 
 
@@ -14,6 +15,7 @@ const appStore = configureStore({
         movieDetails: movieDetalsReducer,
         filterGenres: filterReducer,
         searchData: searchReducer,
+        theame: theameReducer
     }
 })
 

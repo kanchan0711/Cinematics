@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
   return (
-    <div className='bg-[#f5f5f5]'>
+    <div className='bg-[#f5f5f5] dark:bg-black'>
       <Header />
       <Outlet /> {/* Routed components will render here */}
     </div>

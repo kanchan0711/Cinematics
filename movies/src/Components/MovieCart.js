@@ -1,6 +1,7 @@
 import React from "react";
 import { IMG_CDN_URL } from "../utils/Constant";
 import { Link } from "react-router-dom";
+import './cart.css'
 
 const MovieCart = ({ movie }) => {
 
@@ -12,7 +13,7 @@ const MovieCart = ({ movie }) => {
   };
 
   return (
-    <div className=" w-[200px] h-[390px]">
+    <div className="cart w-[200px] h-[390px]">
       <img
         className="w-[200px] h-[255px] object-cover flex-shrink-0 rounded-t-md"
         src={IMG_CDN_URL + poster_path}

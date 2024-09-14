@@ -1,4 +1,4 @@
-export const API_key = "38913ed3b726655f529384dbaf20542b"
+export const API_key = process.env.REACT_APP_TMDB_API_KEY;
 
 // export const BG_IMG = "https://png.pngtree.com/thumb_back/fh260/background/20191113/pngtree-blue-movie-film-texture-background-image_321897.jpg"
 
@@ -9,7 +9,7 @@ export const API_OPTIONS = {
       accept: "application/json",
       //   Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzODkxM2VkM2I3MjY2NTVmNTI5Mzg0ZGJhZjIwNTQyYiIsIm5iZiI6MTcyMzU0NTIxMC42NTMwODEsInN1YiI6IjY2YmIxMGE1MzgyZmMzNGQ2NmFhZmZkNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2y4XyXEsufn_eTp6J6jLJeb5gomHEWcGVk6xUHhal9U'
       Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzODkxM2VkM2I3MjY2NTVmNTI5Mzg0ZGJhZjIwNTQyYiIsIm5iZiI6MTcyMzU0NjM4NS4xNjMyODMsInN1YiI6IjY2YmIxMGE1MzgyZmMzNGQ2NmFhZmZkNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dd5qhDLd6u8dwEDUjXKADDNbRXExXktLo5hfqL-qkD4",
+        "Bearer "+ process.env.REACT_APP_TMDB_AUTH_KEY,
     },
   };
 
